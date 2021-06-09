@@ -23,3 +23,6 @@ print(empleado)
 empleado.nombre = "Karla Ivone"
 empleado.sueldo = 1000.00
 print(empleado)
+
+
+print()
