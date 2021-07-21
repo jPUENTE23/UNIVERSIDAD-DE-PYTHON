@@ -2,27 +2,27 @@
 
 class DispositivoEntrada :
     def __init__(self,tipoEntrada,marca):
-        self.tipoEntrada = tipoEntrada
-        self.marca = marca
+        self._tipoEntrada = tipoEntrada
+        self._marca = marca
 
     @property
     def Tipoentrada (self):
-        return self.tipoEntrada
+        return self._tipoEntrada
 
     @Tipoentrada.setter
     def Tipoentrada (self, tipoEntrada):
-        self._apellido = tipoEntrada
+        self._tipoEntrada = tipoEntrada
 
     @property
     def Marca (self):
-        return self.marca
+        return self._marca
 
     @Marca.setter
     def Marca (self, marca):
-        self._apellido = marca
+        self._marca = marca
 
     def __str__(self):
-        return f'\nTipo de entrada: {self.tipoEntrada}\nMarca: {self.marca}'
+        return f'\nTipo de entrada: {self._tipoEntrada}\nMarca: {self._marca}'
 
 
 if __name__ == '__main__':
