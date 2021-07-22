@@ -2,15 +2,16 @@ from raton import Raton
 from Monitor import Monitor
 from teclado import Teclado
 
-class Commputadora:
+class Commputadora(Monitor,Teclado,Raton):
     conattador_Compuadora = 0
 
-    def __init__(self, nombre, monitor, taclado, raton):
+    def __init__(self, nombre, marcaMonitor, tamMonitor, tipoEntradaTeclado, marcaTeclado, tipoEntradaRaton, marcaRaton):
         Commputadora.conattador_Compuadora += 1
+        Monitor.__init__(self,marcaMonitor,tamMonitor)
+        Teclado.__init__(self,tipoEntradaTeclado, marcaTeclado)
+        Raton.__init__(self,tipoEntradaRaton,marcaRaton)
+        self.idComputadora = Commputadora.conattador_Compuadora
         self._nombre = nombre
-        self._monitor = monitor
-        self._teclado = Teclado
-        self._raton = raton
 
     @property
     def Nombre (self):
@@ -20,26 +21,11 @@ class Commputadora:
     def Nombre (self, nombre):
         self._nombre = nombre
 
-    @property
-    def Monitor (self):
-        return self._monitor
 
-    @Monitor.setter
-    def Monitor (self, monitor):
-        self._monitor = monitor
+    def __str__(self):
+        return f'\n{self._nombre} : {self.idComputadora}\n{Monitor.__str__(self)}\n{Teclado.__str__(self)}\n{Raton.__str__(self)}'
 
-    @property
-    def Teclado (self):
-        return self._teclado
 
-    @Teclado.setter
-    def Teclado (self, teclado):
-        self._teclado = teclado
-
-    @property
-    def raton (self):
-        return self._raton
-
-    @raton.setter
-    def raton (self, raton):
-        self._raton = raton
+if __name__ == '__main__':
+    objCompu = Commputadora('Gamer','LG','20 Pulgadas','usb','Logitch','Bluetooh','Microsoft')
+    print(objCompu)

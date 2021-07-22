@@ -26,7 +26,7 @@ class Monitor:
         self._Tamaño_Monitor = Tamaño_Monitor
 
     def __str__(self):
-        return f'\nIdMonitor: {self.idMonitor}\nMarca: {self._Marca}\nTamaño de Monitor: {self._Tamaño_Monitor}'
+        return f'\nMonitor [IdMonitor: {self.idMonitor}. Marca: {self._Marca}. Tamaño de Monitor: {self._Tamaño_Monitor}]'
 
 if __name__ == '__main__':
     objMonitor = Monitor('DELL','20Pulgadas')

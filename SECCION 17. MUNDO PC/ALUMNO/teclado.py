@@ -1,15 +1,16 @@
+from DispositivoEntrada import DispositivoEntrada
 
-
-class Teclado:
+class Teclado(DispositivoEntrada):
     Contador_Teclado = 0
 
-    def __init__(self):
+    def __init__(self, tipoEntrada, marca):
         Teclado.Contador_Teclado += 1
+        super().__init__(tipoEntrada, marca)
         self.idTeclado = Teclado.Contador_Teclado
 
     def __str__(self):
-        return f'\nIdTeclado: {self.idTeclado}'
+        return f'\nTeclado: [IdTeclado: {self.idTeclado}. {super().__str__()}]'
 
 if __name__ == '__main__':
-    objteclado = Teclado()
+    objteclado = Teclado('usb','Lenovo')
     print(objteclado)
