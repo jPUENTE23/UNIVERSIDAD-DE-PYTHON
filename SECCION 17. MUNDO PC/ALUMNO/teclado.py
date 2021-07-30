@@ -9,7 +9,7 @@ class Teclado(DispositivoEntrada):
         self.idTeclado = Teclado.Contador_Teclado
 
     def __str__(self):
-        return f'\nTeclado: [IdTeclado: {self.idTeclado}. {super().__str__()}]'
+        return f'Teclado: [IdTeclado: {self.idTeclado}. {super().__str__()}]'
 
 if __name__ == '__main__':
     objteclado = Teclado('usb','Lenovo')

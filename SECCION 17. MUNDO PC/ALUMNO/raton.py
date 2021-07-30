@@ -9,7 +9,7 @@ class Raton(DispositivoEntrada):
         self.IdRaton = Raton.conador_raton
 
     def __str__(self):
-        return f'\nRaton [IdRaton: {self.IdRaton}. {super().__str__()}]'
+        return f'Raton: [IdRaton: {self.IdRaton}. {super().__str__()}]'
 
 if __name__ == '__main__':
     objRaton = Raton('usb','Hp')
