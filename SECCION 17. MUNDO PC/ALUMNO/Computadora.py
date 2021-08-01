@@ -47,7 +47,7 @@ class Commputadora:
 
 
     def __str__(self):
-        return f''''
+        return f'''
         {self._nombre}:{self.id_Computadora}
         {self._monitor}
         {self._teclado}
@@ -60,4 +60,11 @@ if __name__ == '__main__':
     objTeclado = Teclado('usb','hp')
     objRaton = Raton('usb','logitech')
     objCompu1 = Commputadora('Gamer',objMonitor,objTeclado,objRaton)
+
+    objMonitor = Monitor('Lenovo','18 Pulgadas')
+    objTeclado = Teclado('usb','hp')
+    objRaton = Raton('usb','logitech')
+    objCompu2 = Commputadora('Gamer',objMonitor,objTeclado,objRaton)
+
     print(objCompu1)
+    print(objCompu2)
