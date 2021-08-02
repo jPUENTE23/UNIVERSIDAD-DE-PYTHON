@@ -53,8 +53,6 @@ class Commputadora:
         {self._teclado}
         {self._raton}
         '''
-
-
 if __name__ == '__main__':
     objMonitor = Monitor('Lenovo','18 Pulgadas')
     objTeclado = Teclado('usb','hp')
