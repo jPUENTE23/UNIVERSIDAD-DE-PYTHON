@@ -15,10 +15,3 @@ class Pelicula:
     def __str__(self):
         return f"{self._Nombre}"
 
-if __name__ == "__main__":
-    MyObject = Pelicula("Dune")
-    print(MyObject)
-    print(MyObject._Nombre)
-
-    MyObject._Nombre = "Venom"
-    print(MyObject._Nombre)

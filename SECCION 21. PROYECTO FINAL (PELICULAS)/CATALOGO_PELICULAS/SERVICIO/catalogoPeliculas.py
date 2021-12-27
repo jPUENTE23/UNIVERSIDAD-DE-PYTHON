@@ -1,5 +1,7 @@
 
 import sys
+import os
+
 sys.path.insert(0, 'C:\\Users\\jorge\\001 Biblioteca\\UDEMY\\UNIVERSIDAD DE PYTHON_2\\SECCION 21. PROYECTO FINAL (PELICULAS)')
 
 from CATALOGO_PELICULAS.DOMINIO.pelicula import Pelicula
@@ -24,12 +26,7 @@ class CataloloPeliculas(Pelicula):
             for pelicula in arvhivo:
                 print("\n" + pelicula)
 
-while True:
-    nombrePelicula = input("Nombre Pelicula: ")
-    onjeto = CataloloPeliculas(nombrePelicula)
-    onjeto.agregar_pelicula()
-    opcion = int(input("Deseas agregar otra pelicula? [1-SI / 2-NO]: "))
-    if opcion == 2:
-        break
+    @staticmethod
+    def Eliminar():
+        os.remove(CataloloPeliculas.ruta_Archivo)
 
-CataloloPeliculas.listas_peliculas()
