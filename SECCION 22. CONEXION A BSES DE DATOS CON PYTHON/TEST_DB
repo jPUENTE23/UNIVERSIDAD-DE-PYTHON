@@ -1,0 +1,25 @@
+
+
+CREATE TABLE DATOS(
+	Direccion VARCHAR NOT NULL,
+	Telefono INT NOT NULL
+);
+
+CREATE TABLE PERSONA(
+	IdPersona SERIAL NOT NULL,
+	Nombre CHAR(50) NOT NULL,
+	Apellidos CHAR(50) NOT NULL,
+	Email VARCHAR(50) NOT NULL,
+	CONSTRAINT pk_IdPersona PRIMARY KEY (IdPersona)
+);
+
+INSERT INTO persona (Nombre, Apellidos, Email)
+VALUES ('JORGE','PUENTE MUÑIZ','jorge@gmail.com');
+
+INSERT INTO persona (Nombre, Apellidos, Email)
+VALUES ('JOSE','HERNANDEZ','jose@gmail.com');
+
+INSERT INTO persona (Nombre, Apellidos, Email)
+VALUES ('Karina', 'Martinez', 'karin@gmail.com');
+
+SELECT * FROM persona;
