@@ -1,11 +1,12 @@
 from typing import final
+
+
+# psycopg2 es el modulo con le que nos conectaremos a nuestra base de datos
 import psycopg2
 
-
-
-# credenciales para la conexion a las base de datos
-
 try:
+    
+    # credenciales para la conexion a las base de datos
     conexion = psycopg2.connect(
         user = "postgres",
         password = "admin",
